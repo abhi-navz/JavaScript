@@ -38,3 +38,27 @@ console.log(typeof(x ));
 console.log(typeof(a)); // typeof(null) --> object
 console.log(typeof(object)); // --> object
 console.log(typeof(id));  // --> symboll
+
+
+// ****************************************************
+
+// Stack{Primitive} , Heap ({ Non-Primitive)
+
+let number1 = 300
+let number2 = number1; // here number2 gets a copy of number1
+// console.log(number2);
+number2 = 100;  // change in number 2 won't change anything in number1/
+// console.log(number1);
+// console.log(number2);
+
+
+let userOne = {
+    name: "Abhinav",
+    age: 20
+}
+
+let userTwo = userOne; // since the memory of usrOne a object is stored in heap in this case so userTwo will get a reference of the same location of userOne. and changing in the value of userTwo will also change the value in userOne.
+
+userTwo.name = "Hope"
+userTwo.age = 16
+console.log(userOne);
